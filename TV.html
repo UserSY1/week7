@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TV</title>
+</head>
+
+<style type="text/css">
+	
+	body { 
+		background-color : black; 
+		margin: 0; 
+		justify-content: center;
+		align-content: center;
+	}
+ 	
+ 	#TV {
+ 		
+ 		display: flex;
+ 		justify-content: center;
+ 		align-content: center;
+ 		width : 1482px ; 
+ 		height : 831.609px;
+ 		margin-top : none;
+ 	
+ 	}
+ 	#image {
+  		width: 100%;
+  		height : 100%;
+ 		margin: 0 ;
+ 		object-fit: contain;
+ 		margin-top : none;
+ 		z-index: 2;
+  	}
+
+ 	#ind {
+
+ 		display : block;
+ 		position : absolute ;
+ 		width : 200px ;
+ 		height : 135px;
+ 		top : 40px ; 
+ 		left : 1128px ;
+ 		font-size: 120px;
+ 		text-align: center;
+ 		color : white;
+ 		z-index: 5;
+ 	}
+ 	#offInd {
+
+ 		display : block;
+ 		position : absolute ;
+ 		width : 195px ;
+ 		height : 130px;
+ 		top : 42px ; 
+ 		left : 1132px ;
+ 		font-size: 100px;
+ 		text-align: center;
+ 		color : white;
+ 		z-index: 6;
+ 		background-color: black;
+ 	}
+
+ 	.pad{
+
+ 		display: flex;
+ 		position: absolute;
+ 		width : 108px;
+ 		height : 110px;
+ 		cursor : pointer;
+ 		background-color: transparent;
+ 		border : none;
+ 		z-index: 2;
+
+
+ 	}
+ 	.pad:hover {
+ 		transform: scale(0.95);
+ 		filter : brightness(60%);
+ 	}
+ 	#back:hover {
+ 		transform: scale(0.95);
+ 		filter : brightness(60%);
+ 	}
+ 	#ent:hover {
+ 		transform: scale(0.95);
+ 		filter : brightness(60%);
+ 	}
+
+ 	#one {
+
+ 		top : 194px ; 
+ 		left : 1120px;
+
+ 	}
+ 	#two {
+
+ 		top : 194px ; 
+ 		left : 1239px;
+
+
+ 	}
+ 	#three {
+
+ 		top : 194px ; 
+ 		left : 1358px;
+
+ 	}
+ 	#four {
+
+ 		top : 312px ; 
+ 		left : 1120px;
+
+ 	}
+ 	#five {
+
+ 		top : 312px ; 
+ 		left : 1239px;
+
+
+ 	}
+ 	#six {
+
+ 		top : 312px ; 
+ 		left : 1358px;
+
+ 	}
+ 	#seven {
+
+ 		top : 432px ; 
+ 		left : 1120px;
+
+ 	}
+ 	#eight {
+
+ 		top : 432px ; 
+ 		left : 1239px;
+
+
+ 	}
+ 	#nine {
+
+ 		top : 432px ; 
+ 		left : 1358px;
+
+ 	}
+ 	#zero {
+
+ 		top : 552px ; 
+ 		left : 1120px;
+
+ 	}
+ 	#back {
+
+ 		display: flex;
+ 		position: absolute;
+ 		width : 227px;
+ 		height : 110px;
+ 		top : 552px;
+ 		left : 1242px ;
+ 		z-index: 2;
+
+ 	}
+ 	#ent{
+		display: flex;
+	 	position: absolute;
+ 		width : 345px;
+ 		height : 110px;
+ 		top : 671px;
+ 		left : 1125px ;
+ 		z-index: 2;
+
+ 	}
+ 	.screen{
+ 		display: flex;
+ 		position :absolute;
+ 		width : 1051px;
+ 		height: 747px; 
+ 		top: 37px;
+ 		left : 51px;
+ 		align-content: center;
+ 		justify-content: center;
+ 	}
+
+ 	#power {
+
+		display: flex;
+ 		position: absolute;
+ 		width : 108px;
+ 		height : 110px;
+ 		cursor : pointer;
+ 		background-color: transparent;
+ 		border : none;
+ 		left : 1354px;
+ 		top : 60px;
+ 		transform: rotate(45deg);
+ 		transition : transform 1s ease-in-out;
+ 		z-index: 2;
+ 	}
+ 	#noSignal{
+ 		
+ 		display : none;
+ 		z-index : 0;
+ 		opacity: 0;
+ 		transition : opacity 2s ease-in-out
+ 	}
+ 	#letterBox {
+ 		display : flex;
+ 		position: absolute;
+ 		height : 100vh ;
+ 		width: 45px;
+ 		left : 0px ;
+ 		z-index: 1;
+ 		background-color: black;
+ 	}
+</style>
+
+
+<body>
+
+	<div id = TV>
+		<div class = screen><video id = "noSignal" src = "noSignal.mp4"></div>
+		<img id = image src = "1.png">
+		<div id = ind></div>
+		<div id = offInd>OFF</div>
+		<div id = letterBox></div>
+		<div id = power><img src = "power.png"></div>
+		<div class = pad id = one data-number = "1"><img id = but1 src = "but1.png"></div>
+		<div class = pad id = two data-number = "2"><img id = but2 src = "but2.png"></div>
+		<div class = pad id = three data-number = "3"><img id = but3 src = "but3.png"></div>
+		<div class = pad id = four data-number = "4"><img id = but4 src = "but4.png"></div>
+		<div class = pad id = five data-number = "5"><img id = but5 src = "but5.png"></div>
+		<div class = pad id = six data-number = "6"><img id = but6 src = "but6.png"></div>
+		<div class = pad id = seven data-number = "7"><img id = but7 src = "but7.png"></div>
+		<div class = pad id = eight data-number = "8"><img id = but8 src = "but8.png"></div>
+		<div class = pad id = nine data-number = "9"><img id = but9 src = "but9.png"></div>
+		<div class = pad id = zero data-number = "0"><img id = but0 src = "but0.png"></div>
+		<div id = back><img id = butBack src = "butBack.png"></div>
+		<div id = ent><img id = butEnt src = "butEnt.png"></div>
+	</div>
+
+	<audio id = "onSnd" src = "on.mp3">
+	<audio id = "noSignalSnd" src = "noSignalSnd.mp3">
+	
+
+<script type="text/javascript">
+	
+
+	const buttonData = document.querySelectorAll('.pad');
+	const indicator = document.querySelector('#ind');
+	const backspaceButton = document.querySelector('#back');
+	const enter = document.querySelector('#ent')
+	const turnOn = document.getElementById('#screen');
+
+	let numbers = [];
+	
+	var state = "off";
+
+
+	power.onclick = function(){
+		
+		if(state == "off"){
+
+			state = "on"
+			const powerBut = document.querySelector('#power')
+
+			powerBut.style.transform = `rotate(${-45}deg)`;
+			
+				indicator.textContent = 'on';
+				onSnd.play();
+
+				noSignal.play();
+				noSignal.loop = true;
+				noSignalSnd.loop = true;
+				noSignalSnd.volume = 25/100;
+
+				onSnd.src = "on.mp3"
+				noSignal.src = "noSignal.mp4"
+				noSignalSnd.src = "noSignalSnd.mp3"
+				
+
+			offInd.style.zIndex = 0 ;
+
+			setTimeout(() => {
+				indicator.textContent = '';
+
+			},	2100);
+			setTimeout(() =>{
+				noSignal.style.display = 'block';
+				noSignal.style.opacity = 1;
+			},	2100)
+			setTimeout(() => {
+				noSignalSnd.play();
+			}, 2100)
+
+
+
+			buttonData.forEach(button => {
+			button.addEventListener('click', () => {
+				const number = button.dataset.number;
+				numbers.push(number);
+
+			if(numbers.length >2) {
+				numbers.shift();
+			}
+
+			indicator.textContent = numbers.join('');
+
+			});
+
+			ent.onclick = function(){
+
+				const channel = parseInt(numbers.join(''));
+
+				if (channel === 12) {
+
+					
+					onSnd.src = "fireMusic.mp3"
+					onSnd.volume = 2/100 ;
+					onSnd.play();
+					noSignal.src = "ch12.mp4"
+					noSignal.play();
+					noSignal.style.height = '747px';
+					noSignalSnd.src = "fire.mp3"
+					noSignalSnd.volume = 100/100;
+
+					noSignalSnd.play();
+					noSignalSnd.loop = true ;
+					onSnd.loop = true ;
+					noSignal.loop = true ;
+
+				}
+
+			}
+
+
+		});
+
+		backspaceButton.addEventListener('click',() =>{
+			numbers = [];
+			indicator.textContent = '';
+		});
+			
+
+		}else if (state == "on"){
+
+			state = "off"
+			const powerBut = document.querySelector('#power')
+
+			powerBut.style.transform = `rotate(${+45}deg)`;
+			indicator.textContent = 'off';
+
+			onSnd.pause();
+			noSignal.pause();
+			noSignalSnd.pause();
+			onSnd.currentTime = 0;
+
+			offInd.style.zIndex = 5 ;
+
+			noSignal.style.display = 'none';
+
+
+		}
+	}
+
+	
+
+
+		
+	
+	
+	console.log(state)
+
+//	backspaceButton.addEventListener('click', () =>{
+// 		if (numbers.legth > 0) {
+// 			numbers.shift();
+// 			indicator.textContent = numbers.join('');
+ 	
+//		}
+//	});
+
+
+	
+	
+
+</script>
+
+</body>
+</html>
